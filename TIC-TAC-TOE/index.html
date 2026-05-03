@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h1 class="game-title">Tic Tac Toe</h1>
+    <div class="win-message" id="win-msg"></div>
+    
+    <main class="game-container">
+        <div class="board-container">
+            <!-- SVG for hand-drawn lines -->
+            <svg class="tic-tac-toe-board" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <!-- Vertical lines - slightly wobbly -->
+              <path d="M 98 10 Q 102 80 97 150 Q 103 220 99 290" 
+                    stroke="#2c3e50" stroke-width="12" fill="none" stroke-linecap="round"/>
+              <path d="M 198 8 Q 195 90 202 155 Q 197 225 201 292" 
+                    stroke="#2c3e50" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+              <!-- Horizontal lines - slightly wobbly -->
+              <path d="M 10 98 Q 80 95 150 102 Q 225 97 290 99" 
+                    stroke="#2c3e50" stroke-width="12" fill="none" stroke-linecap="round"/>
+              <path d="M 12 198 Q 85 195 155 203 Q 220 197 288 201" 
+                    stroke="#2c3e50" stroke-width="12" fill="none" stroke-linecap="round"/>
+            </svg>
+
+            <!-- Clickable cells -->
+            <div class="cells" id="cells">
+              <div class="cell" data-index="0"></div>
+              <div class="cell" data-index="1"></div>
+              <div class="cell" data-index="2"></div>
+              <div class="cell" data-index="3"></div>
+              <div class="cell" data-index="4"></div>
+              <div class="cell" data-index="5"></div>
+              <div class="cell" data-index="6"></div>
+              <div class="cell" data-index="7"></div>
+              <div class="cell" data-index="8"></div>
+            </div>
+            
+            <div class="buttons">
+              <button id="reset-game">Reset Game</button>
+              <button id="new-game">New Game</button>
+            </div>
+        </div>
+        <div class="status">Current player: X</div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
